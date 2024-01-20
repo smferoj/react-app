@@ -2,7 +2,7 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom';
 import Master from '../layout/Master';
 import Dashboard from '../modules/Dashboard';
-import AddCategory from '../modules/category/AddCategory';
+import Test from './../modules/Test';
 
 const ProjectRouter = createBrowserRouter([
     {
@@ -14,8 +14,8 @@ const ProjectRouter = createBrowserRouter([
                 element: <Dashboard/>
             },
             {
-                path: '/category/create',
-                element: <AddCategory/>
+                path: '/test',
+                element: <Test/>
             },
         ]
     }

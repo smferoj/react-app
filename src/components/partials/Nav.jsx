@@ -2,11 +2,10 @@ import React from 'react';
 import Swal from 'sweetalert2' 
 import $ from 'jquery';
 import axios from 'axios';
-import Constants from '../Constants';
 
 const Nav = () => {
     const handleSidebar=()=>{
-       $('body').toggleclassName('sb-sidenav-toggled');
+       $('body').toggleClass('sb-sidenav-toggled');
     }
 
     const handleLogout = ()=>{
@@ -20,7 +19,7 @@ const Nav = () => {
             confirmButtonText: "Yes, Logout!"
           }).then((result) => {
             if (result.isConfirmed) {
-                axios.post(`${Constants.BASE_URL}/logout`)
+                axios.post('http://127.0.0.1:8000/api/logout')
                .then(res => {
                 localStorage.removeItem('email');
                 localStorage.removeItem('name');

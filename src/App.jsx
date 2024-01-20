@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import PublicRouter from "./components/router/PublicRouter";
 import axios from "axios";
 
+
 function App() {
   const [auth, setAuth] = useState(false);
   useEffect(() => {
@@ -17,12 +18,13 @@ function App() {
   }, []);
 
   return (
-    <>
+      <> 
       {auth ?
         <RouterProvider router={ProjectRouter} /> :
         <RouterProvider router={PublicRouter} />
       }
     </>
+  
   )
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom';
 import AuthLayout from '../layout/AuthLayout';
 import Login from '../modules/auth/Login';
+import Public from '../modules/Public';
 
  
 const PublicRouter = createBrowserRouter([
@@ -12,6 +13,10 @@ const PublicRouter = createBrowserRouter([
             {
                 path: '/',
                 element: <Login/>
+            },
+            {
+                path: '/public',
+                element: <Public/>
             }
         ]
     }

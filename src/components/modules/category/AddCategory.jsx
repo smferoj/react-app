@@ -1,8 +1,12 @@
 import React from 'react'
+import BreadCrumb from '../../partials/BreadCrumb'
 
 const AddCategory = () => {
   return (
-    <div>AddCategory</div>
+    <>
+       <BreadCrumb title={'AddCategory'}/>
+       <div className='row'></div>
+    </>
   )
 }
 
