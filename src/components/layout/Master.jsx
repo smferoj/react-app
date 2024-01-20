@@ -14,9 +14,7 @@ const Master = () => {
         <div id="layoutSidenav_content">
           <main>
             <div class="container-fluid px-4">
-           
             <Outlet/>
-
             </div>
           </main>
           <Footer />
