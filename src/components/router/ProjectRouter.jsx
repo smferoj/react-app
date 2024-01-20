@@ -1,8 +1,11 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom';
-import Master from '../layout/Master';
-import Dashboard from '../modules/Dashboard';
+
+import ErrorPage from './../modules/ErrorPage';
+import Master from './../layout/Master';
+import Dashboard from './../modules/Dashboard';
 import Test from './../modules/Test';
+
 
 const ProjectRouter = createBrowserRouter([
     {
@@ -18,8 +21,14 @@ const ProjectRouter = createBrowserRouter([
                 element: <Test/>
             },
         ]
+    }, 
+    {
+        path: '*',
+        element: <ErrorPage/>,
     }
 ])
 
 
 export default ProjectRouter
+
+

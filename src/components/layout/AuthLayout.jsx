@@ -5,7 +5,6 @@ function AuthLayout() {
   return (
     <div>
       <h2> Public Dashboard </h2>
-    
       <Outlet />
     </div>
   )

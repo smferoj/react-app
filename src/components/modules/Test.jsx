@@ -1,10 +1,9 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom';
 
-const Test = () => {
+
+const Test=()=>{
   return (
     <div>
-     <Outlet/>
      This is test page
     </div>
   )

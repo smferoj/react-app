@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import AuthLayout from '../layout/AuthLayout';
 import Login from '../modules/auth/Login';
 import Public from '../modules/Public';
+import ErrorPage from './../modules/ErrorPage';
 
  
 const PublicRouter = createBrowserRouter([
@@ -19,6 +20,10 @@ const PublicRouter = createBrowserRouter([
                 element: <Public/>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <ErrorPage/>,
     }
 ])
 

@@ -1,11 +1,10 @@
 import React from 'react'
 import BreadCrumb from '../partials/BreadCrumb'
-import { Outlet } from 'react-router-dom'
 const Dashboard = () => {
   return (
     <div>
             <BreadCrumb title={'Dashboard'}/>
-            <Outlet/>
+  
               <div class="row">
                 <div class="col-xl-3 col-md-6">
                   <div class="card bg-primary text-white mb-4">
