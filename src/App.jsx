@@ -20,8 +20,8 @@ function App() {
   return (
       <> 
       {auth ?
-        <RouterProvider router={ProjectRouter} /> :
-        <RouterProvider router={PublicRouter} />
+        <RouterProvider router={ProjectRouter}/>:
+        <RouterProvider router={PublicRouter}/>
       }
     </>
   

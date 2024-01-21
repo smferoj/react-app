@@ -1,0 +1,8 @@
+.photo-preview{
+    max-width: 250px;
+
+}
+
+.photo-preview img{
+    width: 100%;
+}

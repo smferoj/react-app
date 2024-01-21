@@ -59,7 +59,7 @@ const Login = () => {
                                     <label className="form-check-label" htmlFor="inputRememberPassword"> Remember Password </label>
                                 </div>
                                 <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                    <button type='submit' className="btn btn-primary" dangerouslySetInnerHTML={{__html:isLoading?' <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading....': 'Login'}}/>
+                                    <button type='submit' className="btn btn-primary" dangerouslySetInnerHTML={{__html:isLoading?' <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading....': 'Login'}}/>
 
                                     <a className="small" href="password.html">Forgot Password?</a>
                                 </div>
