@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import BreadCrumb from '../../partials/BreadCrumb'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Constants from '../../Constants';
 import Swal from 'sweetalert2';
+import CardHeader from '../../partials/miniComponents/CardHeader';
 const AddCategory = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState({status:1});
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -42,15 +44,7 @@ const AddCategory = () => {
     toast:true,
     timer: 1500
   })
-  setInput({
-    name: '',
-    slug: '',
-    serial: '',
-    status: 1,
-    description: '',
-    photo:'' 
-  });
-  setErrors([]);
+  navigate('/category')
 })
 .catch(errors => {
   setIsLoading(false);
@@ -67,16 +61,15 @@ const AddCategory = () => {
       <div className='row mt-5 pt-5'>
         <div className="col-md-8 col-lg-7 col-xl-6 m-auto">
           <div className="card">
-            <div className="card-header d-flex justify-content-between">
-              <h4>Add Category</h4>
-              <button className='btn btn-sm btn-primary'>
-                <Link to="#" className='text-light text-decoration-none'> <i className="fa-solid fa-list"></i> List</Link>
-              </button>
-            </div>
+            <CardHeader 
+            title ='Add Category' 
+            link='/category' 
+            icon ='fa solid fa-list'
+            btn_text ='List'
+            />
+
             <div className="card-body">
               <div className="row">
-
-
                 <div className="col-md-6 mt-2">
                   <label htmlFor="name" className='w-100'>
                     <p>Name</p>

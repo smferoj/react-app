@@ -5,6 +5,7 @@ import ErrorPage from './../modules/ErrorPage';
 import Master from './../layout/Master';
 import Dashboard from './../modules/Dashboard';
 import AddCategory from '../modules/category/AddCategory';
+import CategoryList from '../modules/category/CategoryList';
 
 
 
@@ -20,6 +21,10 @@ const ProjectRouter = createBrowserRouter([
             {
                 path: '/category/create',
                 element: <AddCategory/>
+            },
+            {
+                path: '/category',
+                element: <CategoryList/>
             },
         ]
     }, 
